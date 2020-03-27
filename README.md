@@ -2,6 +2,7 @@
 ## 项目介绍 (种子项目)
 springboot  mybatis-plus mysql lombok
 ## 项目结构
+```text
 ├── README.md 
 ├── pom.xml
 └── src
@@ -56,3 +57,4 @@ springboot  mybatis-plus mysql lombok
                     └── mb
                         └── boot
                             └── BootApplicationTests.java
+```
