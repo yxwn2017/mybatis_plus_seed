@@ -23,3 +23,4 @@ spring:
     url: jdbc:mysql://127.0.0.1:3309/mybatis_boot?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
     username: root
     password: 123456
+
