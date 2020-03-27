@@ -1,8 +1,10 @@
 package com.start.mb.boot.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author wll
@@ -13,6 +15,12 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class MyBatisPlusConfig {
+
+    @LoadBalanced
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
     /**
      * 配置分页插件
