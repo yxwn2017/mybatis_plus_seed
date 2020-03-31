@@ -6,6 +6,8 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
@@ -13,6 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 //@EnableAutoConfiguration
 //@ComponentScan
 @MapperScan("com.start.mb.boot.persistence.mapper")
+@EnableFeignClients
 @EnableDiscoveryClient
 public class BootApplication {
 

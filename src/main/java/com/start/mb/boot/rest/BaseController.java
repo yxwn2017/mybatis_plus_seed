@@ -28,7 +28,7 @@ public abstract class BaseController {
     protected  HttpServletRequest request;
     @Autowired
     protected  HttpServletResponse response;
-
+//
 
     /**
      * 数组返回格式
