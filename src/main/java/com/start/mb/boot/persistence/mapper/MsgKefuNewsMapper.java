@@ -2,6 +2,9 @@ package com.start.mb.boot.persistence.mapper;
 
 import com.start.mb.boot.model.entity.MsgKefuNews;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,12 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface MsgKefuNewsMapper extends BaseMapper<MsgKefuNews> {
 
+
+    /**
+     * 列表查询课程可用的代金券
+     *
+     * @param studentId
+     * @return
+     */
+    List<MsgKefuNews> listByCourse(@Param("studentId") Long studentId);
 }
