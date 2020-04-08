@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ComponentScan;
 //@ComponentScan
 @MapperScan("com.start.mb.boot.persistence.mapper")
 @EnableFeignClients
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class BootApplication {
 
     public static void main(String[] args) {

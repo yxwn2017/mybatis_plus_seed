@@ -1,6 +1,7 @@
 package com.start.mb.boot.rest;
 
 import com.start.mb.boot.rest.feign.FeignTestRest;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.alibaba.nacos.ribbon.NacosServer;
@@ -29,7 +30,7 @@ import java.util.Map;
  */
 @Slf4j
 @RestController
-public class TestController {
+public class RestTestController {
 
     @LoadBalanced
     private final RestTemplate restTemplate;
@@ -40,7 +41,7 @@ public class TestController {
     private FeignTestRest feignTestRest;
 
     @Autowired
-    public TestController(RestTemplate restTemplate, LoadBalancerClient loadBalancerClient) {
+    public RestTestController(RestTemplate restTemplate, LoadBalancerClient loadBalancerClient) {
         this.restTemplate = restTemplate;
         this.loadBalancerClient = loadBalancerClient;
     }

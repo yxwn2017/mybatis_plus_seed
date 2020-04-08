@@ -1,6 +1,7 @@
 # Getting Started
 ## 项目介绍 (种子项目)
-springboot  mybatis-plus mysql lombok
+1 springboot  mybatis-plus mysql lombok
+2 spring_security （spring security + oauth2.0 + jwt）
 ## 项目结构
 ```text
 ├── README.md 
