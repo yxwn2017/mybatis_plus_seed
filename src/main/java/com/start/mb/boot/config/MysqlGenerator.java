@@ -57,7 +57,7 @@ public class MysqlGenerator {
 
         // TODO 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3309/mybatis_boot?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3308/mybatis_boot?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
@@ -118,14 +118,14 @@ public class MysqlGenerator {
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
         // 设置逻辑删除键
-        strategy.setLogicDeleteFieldName("is_del");
+        strategy.setLogicDeleteFieldName("del_flag");
         // TODO 指定生成的bean的数据库表名 需要包含的表名，允许正则表达式（与exclude二选一配置）
-        strategy.setInclude("msg_kefu_news");
+        strategy.setInclude("persistent_logins");
         //strategy.setSuperEntityColumns("id");
         // 驼峰转连字符
         strategy.setControllerMappingHyphenStyle(true);
         //表前缀
-        strategy.setTablePrefix("fangzhou");
+        strategy.setTablePrefix("");
         mpg.setStrategy(strategy);
         // 选择 freemarker 引擎需要指定如下加，注意 pom 依赖必须有！
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());

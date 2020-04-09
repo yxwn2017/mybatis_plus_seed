@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/3/30
  */
 @RestController
-//@RefreshScope
+@RefreshScope
 public class NacosConfigRest {
 
     @Value("${user.name:null}")
