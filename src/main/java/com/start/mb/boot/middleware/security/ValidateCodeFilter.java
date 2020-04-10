@@ -1,6 +1,7 @@
 package com.start.mb.boot.middleware.security;
 
 import com.start.mb.boot.common.Exception.security.ValidateCodeException;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Slf4j
 @Component
 public class ValidateCodeFilter extends OncePerRequestFilter {
 
@@ -31,6 +33,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter {
             try {
                 validateCode(new ServletWebRequest(httpServletRequest));
             } catch (ValidateCodeException e) {
+                log.error("for error, 图片验证码 验证失败！");
                 authenticationFailureHandler.onAuthenticationFailure(httpServletRequest, httpServletResponse, e);
                 return;
             }
